@@ -1,8 +1,12 @@
 package orm
 
+import (
+	orm "github.com/HinekoTech/middleware/orm"
+)
+
 type Banner struct {
 	ID string `db:"id" json:"id" gorm:"type:varchar(36);primary_key;"`
-	GormModel
+	orm.GormModel
 
 	BannerGroupID string `db:"banner_grounp_id"  json:"banner_grounp_id" gorm:"type:varchar(36);index"`
 	ImagePath     string `db:"image_path"  json:"image_path" gorm:"dafault:null;type:varchar(100)"`

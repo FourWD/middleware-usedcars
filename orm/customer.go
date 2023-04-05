@@ -1,8 +1,10 @@
 package orm
 
+import orm "github.com/HinekoTech/middleware/orm"
+
 type Customer struct {
 	ID string `db:"id" json:"id" gorm:"type:varchar(36); primaryKey"`
-	GormModel
+	orm.GormModel
 
 	DomainCode string ` db:"domain_code" json:"domain_code" gorm:"type:varchar(50); index" `
 

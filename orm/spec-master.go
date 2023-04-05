@@ -1,8 +1,10 @@
 package orm
 
+import orm "github.com/HinekoTech/middleware/orm"
+
 type SpecMaster struct {
 	ID string `db:"id" json:"id" gorm:"type:varchar(36);primary_key;"`
-	GormModel
+	orm.GormModel
 
 	SpecMasterGroupID string `db:"spec_master_group_id" json:"spec_master_group_id" gorm:"type:varchar(36);index;"`
 

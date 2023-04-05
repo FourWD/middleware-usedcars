@@ -1,10 +1,14 @@
 package orm
 
-import "time"
+import (
+	"time"
+
+	orm "github.com/HinekoTech/middleware/orm"
+)
 
 type User struct {
 	ID string `db:"id" json:"id" gorm:"type:varchar(36);primary_key;"`
-	GormModel
+	orm.GormModel
 
 	Username  string    `db:"username" json:"username" gorm:"type:varchar(50)"`
 	Password  string    `db:"password" json:"password" gorm:"type:varchar(100)"`

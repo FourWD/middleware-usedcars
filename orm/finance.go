@@ -1,8 +1,10 @@
 package orm
 
+import orm "github.com/HinekoTech/middleware/orm"
+
 type Finance struct {
 	ID string `db:"id" json:"id" gorm:"type:varchar(36);primary_key;"`
-	GormModel
+	orm.GormModel
 
 	Name             string ` db:"name" json:"name" gorm:"type:varchar(50); unique_index " `
 	ContactName      string ` db:"contact_name" json:"contact_name" gorm:"type:varchar(50);" `
