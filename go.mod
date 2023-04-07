@@ -1,4 +1,4 @@
-module usedcars-middleware
+module github.com/HinekoTech/middleware-usedcars
 
 go 1.19
 
